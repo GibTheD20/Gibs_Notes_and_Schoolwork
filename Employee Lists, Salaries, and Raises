@@ -1,0 +1,49 @@
+# (a) Employee list operations
+
+employees = ['David C.', 'Sean S.', 'Shaun A.', 'Devin S.', 'Chastin S.',
+             'John D.', 'Mallorie V.', 'Erica S.', 'Lisa V.', 'Austin G.']
+
+# Split list into two sublists
+subList1 = employees[:5]
+subList2 = employees[5:]
+
+print('Sublist 1:', subList1)
+print('Sublist 2:', subList2)
+
+# Add a new employee to subList2
+subList2.append('Kriti Brown')
+print('Sublist 2 after adding new employee:', subList2)
+
+# Remove the second employee from subList1
+del subList1[1]
+print('Sublist 1 after removing second employee:', subList1)
+
+# Merge both lists
+merged_list = subList1 + subList2
+print('Merged Employee List:', merged_list)
+
+# List of salaries
+salaryList = [50000, 50500, 51000, 51500, 52000, 52500, 53000, 53500, 54000, 54500]
+salaryList.append(55000)
+
+# Give 4% raise to every employee
+for i in range(len(salaryList)):
+    salaryList[i] = salaryList[i] + (salaryList[i] * 0.04)
+
+print('Updated Salary List after 4% raise:', salaryList)
+
+# Sort salary list in descending order
+salaryList.sort(reverse=True)
+print('Top 3 Salaries:', salaryList[:3])
+
+# (b) Convert sentence to word list and reverse
+
+sentence = 'Data analysis helps organizations make better decisions'
+
+# Convert to word list
+wordlist = sentence.split()
+print('Word list:', wordlist)
+
+# Reverse the list
+wordlist.reverse()
+print('Reversed word list:', wordlist) 
