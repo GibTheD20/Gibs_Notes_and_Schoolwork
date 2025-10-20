@@ -1,0 +1,23 @@
+pies = ['Apple' , 'Cherry' , 'Chocolate']
+calorie_list = [300 , 350 , 900]
+
+# Zip combines 2 or more lists, connected by their indices.
+print('Using zip():')
+for pies, calories in zip(pies, calorie_list): 
+    print(f'{pies} pie has {calories} calories.')
+
+# Using a dictionary.items function instead of zip
+print('Using dictionary and .items():')
+pie_calories = {
+    'Apple':300,
+    'Cherry':350,
+    'Chocolate':900
+}
+
+for item in pie_calories.items():
+    print(item)
+
+#Including enumerate to the code.
+print('Using enumerate:')
+for index, (pie, calories) in enumerate(pie_calories.items(), start=1):
+    print(f'{index}. {pie} pie has {calories} calories.')
