@@ -26,6 +26,6 @@ def invert_dict(students_classes):
 
 inverted = invert_dict(students_classes) 
 
-print(f'Inverted course-student dictionary:')
+print(f'Inverted course student dictionary:')
 for course, students in inverted.items():
     print(f'{course} : {students}') # Prints course then students.
