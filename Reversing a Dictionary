@@ -1,0 +1,31 @@
+# Initial Dictionary
+
+students_classes = {
+    'Austin Givens':['CS-1101','ENGL-1102'],
+    'Lisa Vue':['CS-1101' , 'MATH-1101'],  
+    'Nick Moledor':['CS-1101' , 'ENGL-1102'],
+    'Jordyn Robinson':['CS-1101', 'ENGL-1102' , 'MATH-1101' , 'PSYCH-1101'] 
+    }
+
+#Test
+
+for student,classes in students_classes.items():
+    print(f'{student} : {classes}')
+
+
+#Create a function that reverses the list, making keys > values and values > keys,
+
+def invert_dict(students_classes):
+    classes_students = {} # New dictionary that stores course then students.
+    for student, classes in students_classes.items(): #For every student and class in students_classes, .items allows looping of both key and value.
+        for course in classes: # For every course name, like 'CS-1101', in the student's class list.
+            if course not in classes_students: # If course is not in nested list.
+                classes_students[course] = [] # Add the course to the new list.
+            classes_students[course].append(student) # Appends the student, to the courses, essentially changing the keys to values and values to keys.
+    return classes_students #Returns the nested dictionary.
+
+inverted = invert_dict(students_classes) 
+
+print(f'Inverted course-student dictionary:')
+for course, students in inverted.items():
+    print(f'{course} : {students}') # Prints course then students.
